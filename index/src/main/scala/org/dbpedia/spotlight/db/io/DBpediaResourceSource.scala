@@ -169,7 +169,7 @@ object DBpediaResourceSource {
 
           try {
             if(!obj.endsWith("owl#Thing"))
-              resourceByURI(new DBpediaResource(subj).uri).types ::= OntologyType.fromURI(obj)
+              resourceByURI(new DBpediaResource(subj,namespace).uri).types ::= OntologyType.fromURI(obj)
           } catch {
             case e: java.util.NoSuchElementException =>
               uriNotFound += subj

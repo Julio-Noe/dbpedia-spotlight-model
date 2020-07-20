@@ -6,7 +6,7 @@
   ~  you may not use this file except in compliance with the License.
   ~  You may obtain a copy of the License at
   ~
-  ~  http://www.apache.org/licenses/LICENSE-2.0
+ ~  http://www.apache.org/licenses/LICENSE-2.0
   ~
   ~  Unless required by applicable law or agreed to in writing, software
   ~  distributed under the License is distributed on an "AS IS" BASIS,
@@ -23,7 +23,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
-        <dbpedia.spotlight.version>1.0</dbpedia.spotlight.version>
+        <dbpedia.spotlight.version>0.7.1</dbpedia.spotlight.version>
 
         <java.compiler.version>1.8</java.compiler.version>
         <scala.compiler.version>2.10.4</scala.compiler.version>
@@ -928,7 +928,7 @@
             <id>central</id>
             <name>Maven Repository Switchboard</name>
             <layout>default</layout>
-            <url>http://repo1.maven.org/maven2</url>
+            <url>https://repo1.maven.org/maven2</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
