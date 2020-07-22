@@ -23,7 +23,7 @@ import scala.collection.JavaConversions._
 
 @serializable
 class DBpediaResource(var uri : String,
-                      var namespace : String = "",
+                      var namespace : String,
                       var support : Int = 0,
                       var prior : Double = 0.0,
                       var types : List[OntologyType] = List[OntologyType]())
@@ -50,6 +50,10 @@ class DBpediaResource(var uri : String,
 
     def this(uri : String, support : Int, prior : Double) = {
         this(uri, "", support, prior, List[OntologyType]())
+    }
+
+    def this(uri : String, support : Int, prior : Double, types : List[OntologyType]) = {
+        this(uri, "", support, prior, types)
     }
 
     override def equals(obj : Any) : Boolean = {
