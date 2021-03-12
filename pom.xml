@@ -304,7 +304,7 @@
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>r07</version>
+                <version>19.0</version>
                 <!--
                   License: Apache Software License, Version 2.0
                 -->
@@ -860,7 +860,7 @@
             <dependency>
                 <groupId>org.nlp2rdf</groupId>
                 <artifactId>nif</artifactId>
-                <version>0.4</version>
+                <version>0.4.1</version>
                 <!--
                   License: Apache Software License, Version 2.0
                 -->
@@ -900,12 +900,12 @@
 
 
     <repositories>
-        <repository>
+      <!--  <repository>
             <id>maven2-repository.dev.java.net</id>
             <name>Java.net Repository for Maven</name>
             <url>http://download.java.net/maven/2/</url>
             <layout>default</layout>
-        </repository>
+        </repository> -->
 
         <repository>
             <id>java.net-Public</id>

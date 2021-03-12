@@ -33,7 +33,8 @@
     <properties>
         <javaOpts.Xmx>16g</javaOpts.Xmx>
         <spotlight.basedir>${project.basedir}/..</spotlight.basedir>
-    </properties>
+</properties>
+
 
     <build>
         <plugins>
@@ -53,13 +54,31 @@
                     </launchers>
                 </configuration>
             </plugin>
-
+	    <plugin>
+		<artifactId>maven-resources-plugin</artifactId>
+    		<version>3.0.2</version>
+	    	<configuration>
+			<outputDirectory>${basedir}/target/classes/src/main/resources/templates/</outputDirectory>
+			<includeEmptyDirs>true</includeEmptyDirs>
+		    	<resources>
+        			<resource>
+					<directory>${basedir}/src/main/resources/templates/</directory>
+            				<filtering>false</filtering>
+        			</resource>
+    			</resources>
+		</configuration>
+	    </plugin>
         </plugins>
     </build>
 
 
     <dependencies>
 
+<dependency>
+	<groupId>org.apache.velocity</groupId>
+	<artifactId>velocity</artifactId>
+	<version>1.7</version>
+</dependency>
         <dependency>
             <groupId>org.dbpedia.spotlight</groupId>
             <artifactId>core</artifactId>
@@ -150,6 +169,22 @@
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
         </dependency>
+
+<dependency>
+	<groupId>com.sun.xml.bind</groupId>
+	<artifactId>jaxb-core</artifactId>
+	<version>2.3.0.1</version>
+</dependency>
+<dependency>
+	<groupId>javax.xml.bind</groupId>
+	<artifactId>jaxb-api</artifactId>
+	<version>2.3.1</version>
+</dependency>
+<dependency>
+	<groupId>com.sun.xml.bind</groupId>
+	<artifactId>jaxb-impl</artifactId>
+	<version>2.3.1</version>
+</dependency>
 
     </dependencies>
 
